@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Expense Tracker</h1>
+    <h3>Add A New Item:</h3>
+
+    <!-- NAME  -->
+    <div class="wrapper">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" size="100" placeholder="Where was the expense made?">
+        <br>
+
+        <!-- DATE  -->
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date">
+
+        <!-- AMOUNT  -->
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" id="amount" size="72" placeholder="$0.00">
+        <br>
+
+        <!-- BUTTON  -->
+        <button>Add Expense</button>
+        <br>
+
+        <!-- TABLE  -->
+        <table>
+
+            <tr class="thead">
+                <th>Name</th>
+
+                <th>Date</th>
+
+                <th>Amount</th>
+            </tr>
+
+            <tr class="infoRow">
+                <td class="infoName">No Expenses Yet!</td>
+
+                <td class="infoDate"></td>
+
+                <td class="infoAmount"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
