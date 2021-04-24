@@ -31,7 +31,21 @@ body {
 }
 
 
+@media only screen and (max-width: 660px){
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
 
 /* BUTTON STYLES  */
 button {
