@@ -1,21 +1,28 @@
 html, body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 body {
     margin: 0;
     display: flex;
+    font-family: 'Roboto', sans-serif;
     flex-direction: column;
-    justify-content: center;
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    justify-content: center;
 }
 
 
-/* INPUT STYLES  */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
