@@ -3,57 +3,27 @@ const dateInput = document.getElementById("date");
 const amountInput = document.getElementById("amount");
 const btn = document.querySelector("button");
 
-// TD NAME ELEMENT 
-const createNameElement = () => {
-    const infoName2 = document.getElementsByClassName("infoName")[0];
-    const y = infoName2.childNodes[0];
-    infoName2.removeChild(y);
-    infoName2.appendChild(document.createTextNode(nameInput.value));
-
+const createRowElement = () => {
+    const row = document.createElement("tr");
+    const tbody = document.getElementsByTagName("tbody")[0];
+    tbody.appendChild(row);
+    let nameElement = document.createElement("td");
+    let dateElement = document.createElement("td");
+    let amountElement = document.createElement("td");
+    nameElement.appendChild(document.createTextNode(nameInput.value));
+    dateElement.appendChild(document.createTextNode(dateInput.value));
+    amountElement.appendChild(document.createTextNode(amountInput.value));
+    row.appendChild(nameElement);
+    row.appendChild(dateElement);
+    row.appendChild(amountElement);
     nameInput.value = "";
-}
-
-// TD DATE INPUT 
-const createDateElement = () => {
-    const infoDate2 = document.getElementsByClassName("infoDate")[0];
-    infoDate2.appendChild(document.createTextNode(dateInput.value));
-
     dateInput.value = "";
-}
-
-// TD AMOUNT INPUT 
-const createAmountElement = () => {
-    const infoAmount2 = document.getElementsByClassName("infoAmount")[0];
-    infoAmount2.appendChild(document.createTextNode(amountInput.value));
-
     amountInput.value = "";
 }
-
-//  NAME INPUT LENGTH CHECKER
-const nameLength = () => nameInput.value.length;
-
-const checkNameLength = () => {
-    if (nameLength() > 0){
-        createNameElement();
+const addListAfterClick = () => {
+    if (nameInput.value.length > 0 && amountInput.value.length > 0){
+        createRowElement();
     }
 }
 
-
-
-// AMOUNT INPUT LENGTH CHECKER
-const amountLength = () => amountInput.value.length; 
-
-const checkAmountLength = () => {
-    if (amountLength() > 0){
-        createAmountElement();
-    }
-}
-
-
-// ADDING EVENT LISTENERS TO THE BUTTON 
-btn.addEventListener("click", checkNameLength);
-btn.addEventListener("click", checkAmountLength);
-btn.addEventListener("click", createDateElement);
-
-
-
+btn.addEventListener("click", addListAfterClick);
